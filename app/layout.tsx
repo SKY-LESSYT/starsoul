@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://starsoul.industries",
     siteName: "STARSOUL",
-    title: "STARSOUL — Create: Aeronautics Minecraft SMP",
+    title: "STARSOUL - Create: Aeronautics Minecraft SMP",
     description:
       "STARSOUL is a public modded SMP developed by SKY-LESS. Build factories, aircraft, railways, businesses, and more!",
     locale: "en_US",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "STARSOUL — Create: Aeronautics Minecraft SMP",
+    title: "STARSOUL - Create: Aeronautics Minecraft SMP",
     description:
       "Build factories, aircraft, railways, businesses, and your own world on STARSOUL.",
     images: ["/og-image.png"],
