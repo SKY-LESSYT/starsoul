@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 
 export async function GET() {
   try {
-    const response = await fetch("https://api.mcstatus.io/v2/status/java/mc.hypixel.net", {
+    const response = await fetch("https://api.mcstatus.io/v2/status/java/starsoul.industries", {
       cache: "no-store",
     })
 
