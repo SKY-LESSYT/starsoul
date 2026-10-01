@@ -1,6 +1,6 @@
 import { NavBar } from "@/components/NavBar"
 
-const MODRINTH_URL = "/docs/modrinth"
+const MODRINTH_URL = "/downloads/starsoul_modrinth_1.0.2.mrpack"
 const CURSEFORGE_URL = "/docs/curseforge"
 
 export default function Page() {
@@ -77,7 +77,7 @@ export default function Page() {
             href={MODRINTH_URL}
             className="mt-10 inline-flex items-center justify-center gap-3 rounded-xl bg-blue-500 px-7 py-3.5 font-medium text-white transition hover:bg-blue-400"
           >
-            <span>Open STARSOUL on Modrinth</span>
+            <span>Download Modpack</span>
 
             <svg
               className="h-4 w-4 shrink-0"
@@ -180,7 +180,7 @@ export default function Page() {
                     unofficial mirrors or other third-party sources, as these
                     files may not be safe or up to date.
                   </p>
-
+                  {/*
                   <a
                     href={MODRINTH_URL}
                     className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-blue-400 transition hover:text-blue-300"
@@ -199,7 +199,7 @@ export default function Page() {
                         d="M7 17L17 7M7 7h10v10"
                       />
                     </svg>
-                  </a>
+                  </a>*/}
                 </div>
               </div>
             </article>

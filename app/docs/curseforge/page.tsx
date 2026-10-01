@@ -2,7 +2,7 @@ import { NavBar } from "@/components/NavBar"
 
 const MODRINTH_URL = "/docs/modrinth"
 const CURSEFORGE_URL = "/docs/curseforge"
-const CURSEFORGE_DOWNLOAD_URL = "/downloads/starsoul-curseforge.zip"
+const CURSEFORGE_DOWNLOAD_URL = "/downloads/starsoul_curseforge.zip"
 
 export default function Page() {
   return (
