@@ -12,6 +12,7 @@ import {
   Home,
   MessagesCircle,
   Download,
+  Map,
 } from "lucide-react"
 import {
   NavigationMenu,
@@ -196,6 +197,21 @@ export function NavBar() {
             }
           />
         </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            render={
+              <Link
+                href="https://exapane.com/i/c6763092-74c9-49e9-86ef-20982b710117"
+                className={linkClassName}
+              >
+                <Map className="mr-2 h-4 w-4" />
+                Map
+              </Link>
+            }
+          />
+        </NavigationMenuItem>
+
 
         {/* Right side */}
         <div className="ml-auto flex items-center gap-1">
