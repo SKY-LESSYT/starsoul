@@ -2,6 +2,7 @@ import { NavBar } from "@/components/NavBar"
 import { Countdown } from "@/components/Countdown"
 import { Cog, DollarSign, House, Plane, Star, Train } from "lucide-react"
 import HeroSlideshow from "@/components/HeroSlideshow"
+import { MODPACK_SITE_URL } from "@/lib/modpack"
 
 export default function Page() {
   return (
@@ -37,7 +38,7 @@ export default function Page() {
 
             <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
               <a
-                href="/docs/modrinth"
+                href={MODPACK_SITE_URL}
                 className="rounded-xl bg-blue-500 px-7 py-3.5 font-medium text-white transition hover:bg-blue-400"
               >
                 Start Playing
@@ -273,7 +274,7 @@ export default function Page() {
               <p className="text-xs font-medium uppercase tracking-widest text-white/30">
                 Modpack
               </p>
-              <p className="mt-2 text-lg font-medium">122 mods</p>
+              <p className="mt-2 text-lg font-medium">129 mods</p>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
@@ -347,7 +348,8 @@ export default function Page() {
               <p className="text-sm font-medium text-blue-400">01</p>
               <h3 className="mt-3 font-semibold">Install the modpack</h3>
               <p className="mt-2 text-sm leading-6 text-white/40">
-                Download and install STARSOUL through Modrinth/Curseforge.
+                Install STARSOUL with Modrinth, Prism Launcher or CurseForge. It
+                updates itself every time you start the game.
               </p>
             </div>
 
@@ -369,7 +371,7 @@ export default function Page() {
           </div>
 
           <a
-            href="/docs/modrinth"
+            href={MODPACK_SITE_URL}
             className="mt-9 inline-flex rounded-xl bg-blue-500 px-7 py-3.5 font-medium text-white transition hover:bg-blue-400"
           >
             Installation Guide

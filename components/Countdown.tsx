@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react"
 
+import { MODPACK_SITE_URL } from "@/lib/modpack"
+
 // October 1, 2026 at 12:00 PM UTC-6
 // = October 1, 2026 at 18:00 UTC
 const OPENING_TIMESTAMP = Date.UTC(2026, 9, 1, 18, 0, 0)
@@ -75,7 +77,7 @@ export function Countdown() {
           </p>
 
           <a
-            href="/docs/modrinth"
+            href={MODPACK_SITE_URL}
             className="mt-8 inline-flex rounded-xl bg-blue-500 px-7 py-3.5 font-medium text-white transition hover:bg-blue-400"
           >
             Start Playing

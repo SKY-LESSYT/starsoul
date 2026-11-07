@@ -23,6 +23,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { SearchBar } from "./SearchBar"
+import { MODPACK_SITE_URL } from "@/lib/modpack"
 import { FaDiscord, FaYoutube } from "react-icons/fa6"
 
 const gameplayMenu = [
@@ -139,23 +140,13 @@ export function NavBar() {
           <NavigationMenuContent>
             <ul className="w-auto">
               <ListItem
-                href="/docs/modrinth"
-                title="Modrinth"
+                href={MODPACK_SITE_URL}
+                title="Install"
                 icon={
                   <Download className="h-4 w-4 text-muted-foreground" />
                 }
               >
-                Installation guide for Modrinth
-              </ListItem>
-
-              <ListItem
-                href="/docs/curseforge"
-                title="CurseForge"
-                icon={
-                  <Download className="h-4 w-4 text-muted-foreground" />
-                }
-              >
-                Installation guide for CurseForge
+                Modrinth, Prism Launcher and CurseForge
               </ListItem>
             </ul>
           </NavigationMenuContent>
