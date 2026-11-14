@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import Image from "next/image"
+import { useEffect, useState } from "react"
 
 const images = [
   "/images/hero/hero1.webp",
@@ -9,18 +9,18 @@ const images = [
   "/images/hero/hero3.webp",
   "/images/hero/hero4.webp",
   "/images/hero/hero5.webp",
-];
+]
 
 export default function HeroSlideshow() {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 9000);
+      setCurrent((prev) => (prev + 1) % images.length)
+    }, 9000)
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className="pointer-events-none absolute inset-0 h-full w-full overflow-hidden">
@@ -38,5 +38,5 @@ export default function HeroSlideshow() {
         />
       ))}
     </div>
-  );
+  )
 }

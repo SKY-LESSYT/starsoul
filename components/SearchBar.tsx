@@ -34,19 +34,14 @@ import {
 } from "@/components/ui/command"
 
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
+import { MODPACK_SITE_URL } from "@/lib/modpack"
 
 const navigationItems = {
   gettingStarted: [
     {
-      title: "Modrinth",
-      href: "/docs/modrinth",
-      description: "Installation guide for Modrinth",
-      icon: Download,
-    },
-    {
-      title: "Curseforge",
-      href: "/docs/curseforge",
-      description: "Installation guide for Curseforge",
+      title: "Install",
+      href: MODPACK_SITE_URL,
+      description: "Modrinth, Prism Launcher and CurseForge",
       icon: Download,
     },
   ],

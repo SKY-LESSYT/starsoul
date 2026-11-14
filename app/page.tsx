@@ -2,6 +2,7 @@ import { NavBar } from "@/components/NavBar"
 import { Countdown } from "@/components/Countdown"
 import { Cog, DollarSign, House, Plane, Star, Train } from "lucide-react"
 import HeroSlideshow from "@/components/HeroSlideshow"
+import { MODPACK_SITE_URL } from "@/lib/modpack"
 
 export default function Page() {
   return (
@@ -9,7 +10,7 @@ export default function Page() {
       {/* Hero */}
       <section className="relative min-h-screen overflow-hidden">
         {/* Background video */}
-        <HeroSlideshow/>
+        <HeroSlideshow />
 
         {/* Dark overlay */}
         <div className="pointer-events-none absolute inset-0 bg-black/70" />
@@ -22,7 +23,7 @@ export default function Page() {
         {/* Hero content */}
         <div className="relative z-10 flex min-h-screen items-center justify-center px-6">
           <div className="text-center">
-            <p className="mb-10 text-sm font-medium uppercase tracking-[0.4em] text-blue-400">
+            <p className="mb-10 text-sm font-medium tracking-[0.4em] text-blue-400 uppercase">
               A public SMP by SKY-LESS
             </p>
 
@@ -31,13 +32,13 @@ export default function Page() {
             </h1>
 
             <p className="mx-auto mt-8 max-w-2xl text-base leading-8 text-white/65 sm:text-lg">
-              A Create: Aeronautics focused Minecraft SMP where you can build, automate,
-              set up shops, transportation networks, and much more!
+              A Create: Aeronautics focused Minecraft SMP where you can build,
+              automate, set up shops, transportation networks, and much more!
             </p>
 
             <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
               <a
-                href="/docs/modrinth"
+                href={MODPACK_SITE_URL}
                 className="rounded-xl bg-blue-500 px-7 py-3.5 font-medium text-white transition hover:bg-blue-400"
               >
                 Start Playing
@@ -51,7 +52,7 @@ export default function Page() {
               >
                 Explore
               </a>
-               */ }
+               */}
             </div>
 
             <p className="mt-6 text-sm text-white/35">
@@ -78,14 +79,14 @@ export default function Page() {
         </div>
       </section>
 
-      <Countdown/>
+      <Countdown />
 
       {/* Explanation 1 */}
       <section className="bg-black px-6 py-24">
         <div className="mx-auto max-w-5xl">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div>
-              <p className="text-sm font-medium uppercase tracking-[0.25em] text-blue-400">
+              <p className="text-sm font-medium tracking-[0.25em] text-blue-400 uppercase">
                 The Server
               </p>
 
@@ -97,19 +98,27 @@ export default function Page() {
             <div className="space-y-5 text-base leading-8 text-white/55">
               <p>
                 STARSOUL is a public modded SMP created by
-                <a href="https://www.youtube.com/@SKY-LESSS" target="_blank" className="font-medium text-blue-400 transition hover:text-blue-300"> SKY-LESS</a>.
+                <a
+                  href="https://www.youtube.com/@SKY-LESSS"
+                  target="_blank"
+                  className="font-medium text-blue-400 transition hover:text-blue-300"
+                >
+                  {" "}
+                  SKY-LESS
+                </a>
+                .
               </p>
 
               <p>
-                The server is built around Create: Aeronautics,
-                giving you the tools to build factories, aircraft,
-                railways, businesses, and infrastructure alongside other players.
+                The server is built around Create: Aeronautics, giving you the
+                tools to build factories, aircraft, railways, businesses, and
+                infrastructure alongside other players.
               </p>
 
               <p>
-                There isn't one way to play. Build a base, run a
-                business, connect metros, deliver cargo, form a community, or
-                see how far you can push your factory.
+                There isn't one way to play. Build a base, run a business,
+                connect metros, deliver cargo, form a community, or see how far
+                you can push your factory.
               </p>
             </div>
           </div>
@@ -120,7 +129,7 @@ export default function Page() {
       <section className="border-y border-white/10 bg-white/[0.02] px-6 py-24">
         <div className="mx-auto max-w-5xl">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-blue-400">
+            <p className="text-sm font-medium tracking-[0.25em] text-blue-400 uppercase">
               Your World
             </p>
 
@@ -129,20 +138,19 @@ export default function Page() {
             </h2>
 
             <p className="mt-5 leading-7 text-white/50">
-              You have the freedom to build your own corner of
-              the world. What you do with them is up to you! Except maybe don't crash the server.
+              You have the freedom to build your own corner of the world. What
+              you do with them is up to you! Except maybe don't crash the
+              server.
             </p>
           </div>
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <article className="rounded-2xl border border-white/10 bg-black/30 p-7">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-blue-400/25 bg-blue-500/10 text-blue-300">
-                <Cog/>
+                <Cog />
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold">
-                Build & Automate
-              </h3>
+              <h3 className="mt-6 text-xl font-semibold">Build & Automate</h3>
 
               <p className="mt-3 text-sm leading-7 text-white/50">
                 Build factories, automate materials, and create production
@@ -152,26 +160,23 @@ export default function Page() {
 
             <article className="rounded-2xl border border-white/10 bg-black/30 p-7">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-blue-400/25 bg-blue-500/10 text-blue-300">
-                <Plane/>
+                <Plane />
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold">
-                Take to the Skies
-              </h3>
+              <h3 className="mt-6 text-xl font-semibold">Take to the Skies</h3>
 
               <p className="mt-3 text-sm leading-7 text-white/50">
-                Build aircrafts, transport heavy cargo, connect distant places, and fly wherever you please.
+                Build aircrafts, transport heavy cargo, connect distant places,
+                and fly wherever you please.
               </p>
             </article>
 
             <article className="rounded-2xl border border-white/10 bg-black/30 p-7">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-blue-400/25 bg-blue-500/10 text-blue-300">
-                <DollarSign/>
+                <DollarSign />
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold">
-                Run a Business
-              </h3>
+              <h3 className="mt-6 text-xl font-semibold">Run a Business</h3>
 
               <p className="mt-3 text-sm leading-7 text-white/50">
                 Open shops, sell resources, offer services, and build your own
@@ -181,12 +186,10 @@ export default function Page() {
 
             <article className="rounded-2xl border border-white/10 bg-black/30 p-7">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-blue-400/25 bg-blue-500/10 text-blue-300">
-                <Train/>
+                <Train />
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold">
-                Connect the World
-              </h3>
+              <h3 className="mt-6 text-xl font-semibold">Connect the World</h3>
 
               <p className="mt-3 text-sm leading-7 text-white/50">
                 Build railways, metro systems, delivery routes, and other
@@ -196,12 +199,10 @@ export default function Page() {
 
             <article className="rounded-2xl border border-white/10 bg-black/30 p-7">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-blue-400/25 bg-blue-500/10 text-blue-300">
-                <House/>
+                <House />
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold">
-                Make It Yours
-              </h3>
+              <h3 className="mt-6 text-xl font-semibold">Make It Yours</h3>
 
               <p className="mt-3 text-sm leading-7 text-white/50">
                 Claim your land, build your base, form parties, and create
@@ -211,16 +212,14 @@ export default function Page() {
 
             <article className="rounded-2xl border border-white/10 bg-black/30 p-7">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-blue-400/25 bg-blue-500/10 text-blue-300">
-                <Star/>
+                <Star />
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold">
-                Do Something Else
-              </h3>
+              <h3 className="mt-6 text-xl font-semibold">Do Something Else</h3>
 
               <p className="mt-3 text-sm leading-7 text-white/50">
-                Build a cannon, start a war, deliver something across the
-                world, Or come up with something new!
+                Build a cannon, start a war, deliver something across the world,
+                Or come up with something new!
               </p>
             </article>
           </div>
@@ -240,7 +239,7 @@ export default function Page() {
       <section className="bg-black px-6 py-24">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-blue-400">
+            <p className="text-sm font-medium tracking-[0.25em] text-blue-400 uppercase">
               Server Information
             </p>
 
@@ -256,42 +255,42 @@ export default function Page() {
 
           <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-white/30">
+              <p className="text-xs font-medium tracking-widest text-white/30 uppercase">
                 Minecraft
               </p>
               <p className="mt-2 text-lg font-medium">Java Edition 1.21.1</p>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-white/30">
+              <p className="text-xs font-medium tracking-widest text-white/30 uppercase">
                 Mod Loader
               </p>
               <p className="mt-2 text-lg font-medium">NeoForge 21.1.251</p>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-white/30">
+              <p className="text-xs font-medium tracking-widest text-white/30 uppercase">
                 Modpack
               </p>
-              <p className="mt-2 text-lg font-medium">122 mods</p>
+              <p className="mt-2 text-lg font-medium">129 mods</p>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-white/30">
+              <p className="text-xs font-medium tracking-widest text-white/30 uppercase">
                 Access
               </p>
               <p className="mt-2 text-lg font-medium">Free + Public</p>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-white/30">
+              <p className="text-xs font-medium tracking-widest text-white/30 uppercase">
                 Age Requirement
               </p>
               <p className="mt-2 text-lg font-medium">13+</p>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-white/30">
+              <p className="text-xs font-medium tracking-widest text-white/30 uppercase">
                 Server Address
               </p>
               <code className="mt-2 block text-lg font-medium text-blue-300">
@@ -306,10 +305,7 @@ export default function Page() {
       <section className="bg-black px-6 pb-24">
         <div className="mx-auto max-w-4xl">
           <div className="text-center">
-
-            <h2 className="mt-3 text-4xl font-semibold">
-              Have questions?
-            </h2>
+            <h2 className="mt-3 text-4xl font-semibold">Have questions?</h2>
 
             <p className="mx-auto mt-5 max-w-2xl leading-7 text-white/50">
               Find answers about joining, gameplay, claims, shops, mods, and
@@ -329,7 +325,7 @@ export default function Page() {
       {/* Getting Started */}
       <section className="border-t border-white/10 bg-white/[0.02] px-6 py-24">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-blue-400">
+          <p className="text-sm font-medium tracking-[0.25em] text-blue-400 uppercase">
             Getting Started
           </p>
 
@@ -347,7 +343,8 @@ export default function Page() {
               <p className="text-sm font-medium text-blue-400">01</p>
               <h3 className="mt-3 font-semibold">Install the modpack</h3>
               <p className="mt-2 text-sm leading-6 text-white/40">
-                Download and install STARSOUL through Modrinth/Curseforge.
+                Install STARSOUL with Modrinth, Prism Launcher or CurseForge. It
+                updates itself every time you start the game.
               </p>
             </div>
 
@@ -355,7 +352,8 @@ export default function Page() {
               <p className="text-sm font-medium text-blue-400">02</p>
               <h3 className="mt-3 font-semibold">Join the server</h3>
               <p className="mt-2 text-sm leading-6 text-white/40">
-                Look for "Quick Join" or connect to <code className="text-blue-300">starsoul.industries</code>.
+                Look for "Quick Join" or connect to{" "}
+                <code className="text-blue-300">starsoul.industries</code>.
               </p>
             </div>
 
@@ -369,7 +367,7 @@ export default function Page() {
           </div>
 
           <a
-            href="/docs/modrinth"
+            href={MODPACK_SITE_URL}
             className="mt-9 inline-flex rounded-xl bg-blue-500 px-7 py-3.5 font-medium text-white transition hover:bg-blue-400"
           >
             Installation Guide
@@ -390,8 +388,14 @@ export default function Page() {
       <footer className="border-t border-white/10 bg-black px-6 py-8">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 text-center text-xs text-white/30 sm:flex-row sm:text-left">
           <div className="flex gap-1">
-            <p>STARSOUL •{" "}
-              <a href="mailto:mail@sky-less.com" className="font-medium text-blue-400 transition hover:text-blue-300">MAIL@SKY-LESS.COM</a>
+            <p>
+              STARSOUL •{" "}
+              <a
+                href="mailto:mail@sky-less.com"
+                className="font-medium text-blue-400 transition hover:text-blue-300"
+              >
+                MAIL@SKY-LESS.COM
+              </a>
             </p>
           </div>
 

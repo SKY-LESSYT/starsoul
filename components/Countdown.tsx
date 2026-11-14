@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react"
 
+import { MODPACK_SITE_URL } from "@/lib/modpack"
+
 // October 1, 2026 at 12:00 PM UTC-6
 // = October 1, 2026 at 18:00 UTC
 const OPENING_TIMESTAMP = Date.UTC(2026, 9, 1, 18, 0, 0)
@@ -62,7 +64,7 @@ export function Countdown() {
     return (
       <section className="border-y border-blue-400/10 bg-blue-500/[0.03] px-6 py-20">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-blue-400">
+          <p className="text-sm font-medium tracking-[0.25em] text-blue-400 uppercase">
             The world is open
           </p>
 
@@ -75,7 +77,7 @@ export function Countdown() {
           </p>
 
           <a
-            href="/docs/modrinth"
+            href={MODPACK_SITE_URL}
             className="mt-8 inline-flex rounded-xl bg-blue-500 px-7 py-3.5 font-medium text-white transition hover:bg-blue-400"
           >
             Start Playing
@@ -96,7 +98,7 @@ export function Countdown() {
   return (
     <section className="border-y border-white/10 bg-white/[0.02] px-6 py-20">
       <div className="mx-auto max-w-5xl text-center">
-        <p className="text-sm font-medium uppercase tracking-[0.25em] text-blue-400">
+        <p className="text-sm font-medium tracking-[0.25em] text-blue-400 uppercase">
           Opening October 1
         </p>
 
@@ -105,25 +107,13 @@ export function Countdown() {
         </h2>
 
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-4 gap-2 sm:gap-4">
-          <CountdownUnit
-            value={time.days}
-            label="Days"
-          />
+          <CountdownUnit value={time.days} label="Days" />
 
-          <CountdownUnit
-            value={time.hours}
-            label="Hours"
-          />
+          <CountdownUnit value={time.hours} label="Hours" />
 
-          <CountdownUnit
-            value={time.minutes}
-            label="Minutes"
-          />
+          <CountdownUnit value={time.minutes} label="Minutes" />
 
-          <CountdownUnit
-            value={time.seconds}
-            label="Seconds"
-          />
+          <CountdownUnit value={time.seconds} label="Seconds" />
         </div>
 
         <p className="mt-8 text-sm text-white/35">
@@ -134,20 +124,14 @@ export function Countdown() {
   )
 }
 
-function CountdownUnit({
-  value,
-  label,
-}: {
-  value: number
-  label: string
-}) {
+function CountdownUnit({ value, label }: { value: number; label: string }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-black/40 px-3 py-5 sm:px-6 sm:py-6">
       <div className="font-mono text-3xl font-medium tracking-tight text-white text-shadow-[0px_0px_20px_rgba(96,165,250,0.35)] sm:text-5xl">
         {pad(value)}
       </div>
 
-      <div className="mt-2 text-[10px] font-medium uppercase tracking-[0.2em] text-white/30 sm:text-xs">
+      <div className="mt-2 text-[10px] font-medium tracking-[0.2em] text-white/30 uppercase sm:text-xs">
         {label}
       </div>
     </div>

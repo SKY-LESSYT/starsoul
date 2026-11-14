@@ -23,35 +23,32 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { SearchBar } from "./SearchBar"
+import { MODPACK_SITE_URL } from "@/lib/modpack"
 import { FaDiscord, FaYoutube } from "react-icons/fa6"
 
 const gameplayMenu = [
   {
     title: "Claims",
     href: "/docs/gameplay",
-    description:
-      "Learn how to protect your base, create parties, and more.",
+    description: "Learn how to protect your base, create parties, and more.",
     icon: <SquareDashed />,
   },
   {
     title: "Death",
     href: "/docs/gameplay",
-    description:
-      "Learn how death is handled, and how to reclaim your items.",
+    description: "Learn how death is handled, and how to reclaim your items.",
     icon: <Bone />,
   },
   {
     title: "Economy",
     href: "/docs/gameplay",
-    description:
-      "Set up your own shop using Create's shop system!",
+    description: "Set up your own shop using Create's shop system!",
     icon: <BadgeDollarSign />,
   },
   {
     title: "Events",
     href: "/docs/gameplay",
-    description:
-      "Learn how to participate in upcoming server events!",
+    description: "Learn how to participate in upcoming server events!",
     icon: <PartyPopper />,
   },
   {
@@ -64,8 +61,7 @@ const gameplayMenu = [
   {
     title: "Mods",
     href: "/docs/gameplay",
-    description:
-      "A comprehensive overview of every mod on the server.",
+    description: "A comprehensive overview of every mod on the server.",
     icon: <Gem />,
   },
 ]
@@ -113,7 +109,7 @@ export function NavBar() {
   }, [])
 
   return (
-    <NavigationMenu className="fixed left-0 top-0 z-50 w-full max-w-none px-3 py-3">
+    <NavigationMenu className="fixed top-0 left-0 z-50 w-full max-w-none px-3 py-3">
       <NavigationMenuList className="w-full gap-1">
         {/* Home */}
         <NavigationMenuItem>
@@ -139,23 +135,11 @@ export function NavBar() {
           <NavigationMenuContent>
             <ul className="w-auto">
               <ListItem
-                href="/docs/modrinth"
-                title="Modrinth"
-                icon={
-                  <Download className="h-4 w-4 text-muted-foreground" />
-                }
+                href={MODPACK_SITE_URL}
+                title="Install"
+                icon={<Download className="h-4 w-4 text-muted-foreground" />}
               >
-                Installation guide for Modrinth
-              </ListItem>
-
-              <ListItem
-                href="/docs/curseforge"
-                title="CurseForge"
-                icon={
-                  <Download className="h-4 w-4 text-muted-foreground" />
-                }
-              >
-                Installation guide for CurseForge
+                Modrinth, Prism Launcher and CurseForge
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -187,10 +171,7 @@ export function NavBar() {
         <NavigationMenuItem>
           <NavigationMenuLink
             render={
-              <Link
-                href="/docs/faq"
-                className={linkClassName}
-              >
+              <Link href="/docs/faq" className={linkClassName}>
                 <MessagesCircle className="mr-2 h-4 w-4" />
                 FAQ
               </Link>
@@ -211,7 +192,6 @@ export function NavBar() {
             }
           />
         </NavigationMenuItem>
-
 
         {/* Right side */}
         <div className="ml-auto flex items-center gap-1">
@@ -251,12 +231,11 @@ export function NavBar() {
 
             <NavigationMenuContent>
               <div className="w-auto flex-col text-center">
-
-                <div className=" rounded-md bg-muted px-2 py-1.5 font-mono text-sm text-muted-foreground">
+                <div className="rounded-md bg-muted px-2 py-1.5 font-mono text-sm text-muted-foreground">
                   starsoul.industries
                 </div>
 
-                <div className="text-xs p-2 text-muted-foreground">
+                <div className="p-2 text-xs text-muted-foreground">
                   {serverOnline === null
                     ? "Checking server status..."
                     : serverOnline
@@ -266,7 +245,6 @@ export function NavBar() {
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
-
 
           {/* Discord */}
           <NavigationMenuItem>
@@ -332,7 +310,7 @@ function ListItem({
             className="block cursor-pointer rounded-md p-2 transition-colors hover:bg-accent"
           >
             <div className="flex flex-col gap-1 text-sm">
-              <div className="flex items-center gap-2 font-medium leading-none">
+              <div className="flex items-center gap-2 leading-none font-medium">
                 {icon}
                 {title}
               </div>
